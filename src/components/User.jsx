@@ -49,8 +49,8 @@ const User = () => {
         <h1 className="mb-5 text-center">Users List</h1>
         <Link
           to="/create-user"
-          // className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-          className="btn btn-success p-2 m-3 col-2"
+          // className="d-none d-sm-inline-block btn btn-primary"
+          className="btn btn-success p-2 m-3 col-xl-2 col-sm-2"
 
         >
           <i className="fa-solid fa-plus" /> Create User
