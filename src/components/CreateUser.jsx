@@ -45,7 +45,7 @@ const CreateUser = () => {
       if (values.email === "") {
         errors.email = "* Email is required";
       } else if (
-        !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)
       ) {
         errors.email = "* Enter Proper Email (ex : abc@mail.com)";
       }
