@@ -1,0 +1,42 @@
+
+.light-green-sts{
+  background-color: #13ad89;
+}
+
+.light-green{
+  color: #13ad89;
+}
+
+.color-white{
+  color: white;
+}
+
+.btn-light-green {
+background-color: #13ad89;
+color: white;
+border: none;
+}
+.btn-light-green:hover {
+background-color: #086f59;
+color: white;
+border: none;
+}
+.btn-delete {
+background-color: #cf5f1d;
+color: white;
+border: none;
+}
+.btn-delete:hover {
+background-color: #ff5e00;
+color: white;
+border: none;
+}
+
+.form-control {
+border: 1px solid #13ad89;
+}
+
+.form-control:focus {
+border: none;
+box-shadow: 0 0 0 0.2rem #086f59;
+}
