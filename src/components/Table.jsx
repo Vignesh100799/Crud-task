@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Table = ({data,handleDelete}) => {
   return (
+    <div className="container-fluid">
+      <div className="row">
     <table
-    className="table-striped table-responsive table table-borderless  "
+    // className="table-striped table-responsive table table-borderless "
+    className=" table table-borderless table-hover table-striped"
+
     id="dataTable"
-    width="100%"
+
     cellSpacing={0}
   >
     <thead className="text-center table-bordered">
@@ -60,6 +64,8 @@ const Table = ({data,handleDelete}) => {
         })}
     </tbody>
   </table>
+  </div>
+  </div>
   )
 }
 

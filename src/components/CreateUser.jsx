@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setLoading } from "./Reducers/UserReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { MoonLoader } from "react-spinners";
@@ -30,8 +30,8 @@ const CreateUser = () => {
       if (values.username === "") {
         errors.username = "Please enter the name";
       }
-      if (values.name.length <= 3 || values.name.length > 15) {
-        errors.name = "Name should be between 3 to 15";
+      if (values.name.length <= 3) {
+        errors.username = "Name should greaterthan 3";
       }
       if (values.name === "") {
         errors.name = "Please enter User name";
@@ -99,9 +99,11 @@ const CreateUser = () => {
   });
   return (
     <div className="container-fluid">
+      <div className="row p-5 m-5 text-bg-secondary">
+        <h1 className="mb-5 text-center">Create User</h1>
       {data.loading ? (
         <MoonLoader
-          className=" position-fixed"
+          className="position-fixed text-center"
           style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
           color="rgba(4, 163, 255, 1)"
         />
@@ -240,11 +242,13 @@ const CreateUser = () => {
                   className="btn btn-primary"
                   value={"Submit"}
                 />
+                <Link className="btn btn-danger m-3" to={'/'}>Cancel</Link>
               </div>
             </div>
           </form>
         </>
       )}
+    </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { editUser, setUsers } from "./Reducers/UserReducer";
 import { useDispatch } from "react-redux";
 
@@ -29,8 +29,8 @@ const EditUser = () => {
       if (values.username === "") {
         errors.username = "Please enter the name";
       }
-      if (values.name.length <= 3 || values.name.length > 15) {
-        errors.name = "Name should be between 3 to 15";
+      if (values.name.length <= 3) {
+        errors.username = "Name should greaterthan 3";
       }
       if (values.name === "") {
         errors.name = "Please enter User name";
@@ -115,6 +115,9 @@ const EditUser = () => {
 
   return (
     <div className="container-fluid">
+      <div className="row p-5 m-5 text-bg-secondary">
+      <h1 className="mb-5 text-center">Edit User</h1>
+
      <form action="" onSubmit={formik.handleSubmit}>
             <div className="row">
               <div className="col-lg-4">
@@ -246,11 +249,13 @@ const EditUser = () => {
                 <input
                   type="submit"
                   className="btn btn-primary text-center"
-                  value={"Submit"}
+                  value={"Update"}
                 />
+                <Link className="btn btn-danger m-3" to={'/'}>Cancel</Link>
               </div>
             </div>
           </form>
+    </div>
     </div>
   );
 };
