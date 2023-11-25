@@ -1,6 +1,4 @@
 import React from 'react'
-import Sidebar from './Sidebar'
-import Topbar from './Topbar'
 import Card from './Card'
 
 const Dashboard = () => {
