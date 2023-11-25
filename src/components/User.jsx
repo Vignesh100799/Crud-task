@@ -45,8 +45,8 @@ const User = () => {
 
   return (
     <>
-      <div className="row justify-content-end p-5 m-5 text-bg-secondary">
-        <h1 className="mb-5 text-center">Users List</h1>
+      <div className="row justify-content-end text-bg-secondary">
+        <h1 className="m-5 text-center">Users List</h1>
         <Link
           to="/create-user"
           // className="d-none d-sm-inline-block btn btn-primary"

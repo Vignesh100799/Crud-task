@@ -115,8 +115,9 @@ const EditUser = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row p-5 m-5 text-bg-secondary">
-      <h1 className="mb-5 text-center">Edit User</h1>
+            <div className="row p-5 text-bg-secondary">
+
+      <h1 className="m-5 text-center">Edit User</h1>
 
      <form action="" onSubmit={formik.handleSubmit}>
             <div className="row">

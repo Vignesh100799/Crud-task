@@ -98,9 +98,9 @@ const CreateUser = () => {
     },
   });
   return (
-    <div className="container-fluid">
-      <div className="row p-5 m-5 text-bg-secondary">
-        <h1 className="mb-5 text-center">Create User</h1>
+    <div className="container">
+      <div className="row p-5 text-bg-secondary">
+        <h1 className=" text-center m-5">Create User</h1>
       {data.loading ? (
         <MoonLoader
           className="position-fixed text-center"
