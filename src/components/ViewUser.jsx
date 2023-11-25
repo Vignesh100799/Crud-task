@@ -72,10 +72,6 @@ const ViewUser = () => {
                       <th>Catch Phrase</th>
                       <td>{data.users.catchPhrase}</td>
                     </tr>
-                    <tr>
-                      <th>BS</th>
-                      <td>{data.users.bs}</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>

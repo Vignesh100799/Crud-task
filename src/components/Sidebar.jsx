@@ -27,7 +27,7 @@ const Sidebar = () => {
   </div>
   
   <li className="nav-item">
-    <Link className="nav-link" to={'/user'}>
+    <Link className="nav-link" to={'/'}>
       <i className="fas fa-fw fa-chart-area" />
       <span>User</span></Link>
   </li>

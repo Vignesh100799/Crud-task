@@ -26,8 +26,8 @@ function App() {
         <Topbar />
         <div className="container-fluid">
           <Routes>
-            <Route path="/" element={<Dashboard />}></Route>
-            <Route path="/user" element={<User />}></Route>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/" element={<User />}></Route>
             <Route path="/products" element={<Products />}></Route>
             <Route path="/create-user" element={<CreateUser />}></Route>
             <Route path="/view-user/:id" element={<ViewUser />}></Route>
