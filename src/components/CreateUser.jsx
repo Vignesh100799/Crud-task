@@ -49,11 +49,15 @@ const CreateUser = () => {
       ) {
         errors.email = "* Enter Proper Email (ex : abc@mail.com)";
       }
-
-      let enteredDate = new Date(values.dob);
-      let currentDate = new Date();
-      if (currentDate.getFullYear() - enteredDate.getFullYear() <= 18) {
-        errors.dob = "Age should greater than 18";
+      if (!values.zipcode) {
+        errors.zipcode = 'Zip Code is required';
+      } else if (!/^\d{5}$/.test(values.zipcode)) {
+        errors.zipcode = 'Invalid zip code';
+      }
+      if (!values.phone) {
+        errors.phone = 'Phone Number is required';
+      } else if (!/^\d{10}$/.test(values.phone)) {
+        errors.phone = 'Invalid phone number';
       }
 
       return errors;
@@ -96,6 +100,9 @@ const CreateUser = () => {
             <span style={{ color: "red", fontSize: "small" }}>
               {formik.errors.name}
             </span>
+          </div>
+          <div className="col-lg-4">
+
             <label className=" form-label">User Name</label>
             <input
               type="text"
@@ -108,6 +115,7 @@ const CreateUser = () => {
               {formik.errors.username}
             </span>
           </div>
+
           <div className="col-lg-4">
             <label className=" form-label">Email</label>
             <input
@@ -143,12 +151,15 @@ const CreateUser = () => {
               />
               <label className=" form-label">Zipcode</label>
               <input
-                type="text"
+                type="number"
                 className="form-control col-2"
                 name="zipcode"
                 value={formik.values.zipcode}
                 onChange={formik.handleChange}
               />
+               <span style={{ color: "red", fontSize: "small" }}>
+              {formik.errors.zipcode}
+            </span>
                   <label className=" form-label">Phone number</label>
               <input
                 type="text"
@@ -157,6 +168,9 @@ const CreateUser = () => {
                 value={formik.values.phone}
                 onChange={formik.handleChange}
               />
+               <span style={{ color: "red", fontSize: "small" }}>
+              {formik.errors.phone}
+            </span>
           
           </div>
           <div className="col-lg-4">
