@@ -87,7 +87,8 @@ const ViewUser = () => {
                 <i class="fa-solid fa-house p-2"></i>Back to Home
               </Link>
               <Link to="/create-user" className="btn btn-success m-3">
-                <i className="fa-solid fa-plus p-2" /> Create User
+                
+                <i class="fa-solid fa-circle-plus p-2"></i>Create User
               </Link>
             </div>
           )}

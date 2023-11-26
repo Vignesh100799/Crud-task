@@ -44,18 +44,21 @@ const Table = ({data,handleDelete}) => {
                   to={`/view-user/${employee.id}`}
                   className="btn btn-sm btn-info"
                 >
+                  <i class="fa-solid fa-eye p-2"></i>
                   View More Details
                 </Link>
                 <Link
                   to={`/edit-user/${employee.id}`}
                   className="btn btn-sm btn-warning ml-2"
                 >
+                  <i class="fa-solid fa-pen-to-square p-2"></i>
                   Edit User
                 </Link>
                 <button
                   onClick={() => handleDelete(employee.id,employee.name)}
                   className="btn btn-sm btn-danger ml-2"
                 >
+                  <i class="fa-solid fa-trash p-2"></i>
                   Delete User
                 </button>
               </td>
